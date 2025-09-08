@@ -3,206 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Katy Yin | Digital Marketing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Katy Yin | Digital Marketing Specialist</title>
   <style>
-    /* Base */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-    body { color: #111; background: #fff; line-height: 1.6; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
     a { text-decoration: none; color: inherit; }
-    section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
-    h2 { margin-bottom: 25px; color: #111; border-bottom: 2px solid #007BFF; display: inline-block; padding-bottom: 5px; }
 
-    /* Buttons */
-    .btn { padding: 10px 20px; background: #007BFF; color: #fff; border-radius: 6px; display: inline-block; transition: 0.3s; }
-    .btn:hover { background: #0056b3; }
+    /* Hero Section */
+    .hero { display: flex; align-items: center; justify-content: space-between; padding: 40px 10%; background: #f8f9fa; }
+    .hero-content { max-width: 55%; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.1rem; margin-bottom: 20px; }
+    .hero-buttons a { margin-right: 10px; padding: 10px 20px; border-radius: 5px; font-weight: bold; }
+    .btn-primary { background: #007bff; color: white; }
+    .btn-outline { border: 2px solid #007bff; color: #007bff; }
+    .hero img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid #007bff; }
 
-    /* Hero */
-    .hero { text-align: center; padding: 40px 20px; background: #f5f5f5; }
-    .hero h1 { font-size: 2em; font-weight: 700; margin-bottom: 10px; }
-    .hero .headline { font-size: 1.1em; margin-bottom: 20px; color: #333; }
-
-    /* Summary */
-    .summary p { font-size: 1em; color: #444; }
-
-    /* Skills */
-    .skills-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .skills-container .card { background: #f0f0f0; padding: 20px; border-radius: 10px; }
-    .skills-container .card h3 { margin-bottom: 10px; font-size: 1.1em; }
-
-    /* KPI */
-    .kpi-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; text-align: center; }
-    .kpi-card { background: #f0f0f0; padding: 20px; border-radius: 10px; }
-    .kpi-card span { font-size: 1.5em; font-weight: bold; color: #007BFF; display: block; margin-bottom: 5px; }
-
-    /* Projects */
-    .project-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .project-container .card { background: #f9f9f9; padding: 20px; border-radius: 10px; transition: 0.3s; }
-    .project-container .card:hover { background: #e6e6e6; transform: translateY(-4px); }
-
-    /* Experience */
-    .experience-card { background: #f9f9f9; padding: 20px; margin-bottom: 20px; border-radius: 10px; }
-    .experience-card h3 { margin-bottom: 5px; }
-    .experience-card span { font-size: 0.9em; color: #555; }
-    .experience-card ul { margin-top: 10px; padding-left: 20px; }
-
-    /* Languages */
-    .languages p { font-size: 1em; color: #333; }
+    /* Section */
+    section { padding: 50px 10%; }
+    section h2 { font-size: 2rem; margin-bottom: 20px; border-bottom: 3px solid #007bff; display: inline-block; padding-bottom: 5px; }
 
     /* Personal Info */
-    .contact-info { display: flex; flex-direction: column; gap: 12px; max-width: 500px; }
-    .contact-item { display: flex; align-items: center; gap: 10px; font-size: 1em; color: #333; }
-    .contact-item i { color: #007BFF; }
+    .info-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px; }
+    .info-item { display: flex; align-items: center; font-size: 1rem; }
+    .info-item span { margin-left: 10px; }
 
-    /* Footer */
-    footer { text-align: center; padding: 30px 20px; color: #555; font-size: 0.9em; }
+    /* Cards (skills, kpi, etc.) */
+    .card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: #333; color: white; padding: 20px; border-radius: 10px; text-align: center; }
+    .card h3 { margin-bottom: 10px; }
 
-    /* Responsive */
-    @media(max-width: 768px) {
-      .skills-container, .project-container, .kpi-container { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 1.6em; }
-    }
+    /* KPI special styling */
+    .kpi-number { font-size: 2rem; font-weight: bold; color: #007bff; }
+
+    /* Experience */
+    .exp-item { background: #333; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+    .exp-item h3 { margin-bottom: 5px; }
+    .exp-item p { margin: 5px 0; }
+
+    /* Key Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .project-card { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .project-card img { width: 100%; height: 180px; object-fit: cover; }
+    .project-card h3 { margin: 15px; font-size: 1.2rem; }
+    .project-card p { margin: 0 15px 15px; font-size: 0.95rem; color: #555; }
+
+    /* Education */
+    .edu-item { background: #333; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
   </style>
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
-    <h1>Katy Yin</h1>
-    <p class="headline">Digital Marketing Specialist | SEO · Paid Ads · Analytics | Driving Online Sales Growth</p>
-    <a href="Katy_Yin_CV.pdf" class="btn" download>Download CV</a>
+    <div class="hero-content">
+      <h1>Katy Yin</h1>
+      <p>Digital Marketing Specialist | Enhancing Online Sales & Customer Journeys</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">Download CV</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+    <img src="your-photo.jpg" alt="Katy Yin">
   </section>
 
-  <!-- Summary -->
-  <section class="summary">
-    <h2>Professional Summary</h2>
-    <p>5+ years of experience in digital marketing, specializing in SEO, paid advertising, and data analytics. 
-       Proven track record in boosting online sales, improving conversion rates, and driving customer satisfaction 
-       across both B2B and B2C markets in Europe and Asia.</p>
+  <!-- Personal Information -->
+  <section>
+    <h2>Personal Information</h2>
+    <div class="info-list">
+      <div class="info-item">📞 <span>+31 6 1234 5678</span></div>
+      <div class="info-item">✉️ <span>katyyin@email.com</span></div>
+      <div class="info-item">💼 <span>linkedin.com/in/katyyin</span></div>
+      <div class="info-item">📍 <span>Rotterdam, Netherlands</span></div>
+    </div>
   </section>
 
   <!-- Skills -->
-  <section class="skills">
-    <h2>Core Skills</h2>
-    <div class="skills-container">
-      <div class="card">
-        <h3>Advertising & SEO</h3>
-        <p>Google Ads, SEO Strategy, Social Media Ads, Conversion Optimization</p>
-      </div>
-      <div class="card">
-        <h3>Analytics & Tools</h3>
-        <p>Google Analytics, Power BI, Looker Studio, HubSpot, Automation</p>
-      </div>
-      <div class="card">
-        <h3>Soft Skills</h3>
-        <p>Project Management, Cross-team Collaboration, Customer Experience</p>
-      </div>
+  <section>
+    <h2>Skills</h2>
+    <div class="card-container">
+      <div class="card"><h3>SEO & SEM</h3><p>Boosting website visibility & traffic</p></div>
+      <div class="card"><h3>Social Media</h3><p>Multi-platform campaign management</p></div>
+      <div class="card"><h3>Analytics</h3><p>Data-driven insights with Power BI & GA</p></div>
+      <div class="card"><h3>Marketing Automation</h3><p>HubSpot, Salesforce, Marketo</p></div>
     </div>
   </section>
 
   <!-- KPI -->
-  <section class="kpi">
-    <h2>Key Achievements</h2>
-    <div class="kpi-container">
-      <div class="kpi-card"><span data-target="10000">0</span>Orders / Month</div>
-      <div class="kpi-card"><span data-target="300000">0</span>Revenue / Month (¥)</div>
-      <div class="kpi-card"><span data-target="5">0</span>Customer Satisfaction Ranking</div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="projects">
-    <h2>Highlighted Projects</h2>
-    <div class="project-container">
-      <div class="card">
-        <h3>SEO Growth at Heras</h3>
-        <p>Boosted SEO traffic by 40% YoY through content strategy optimization and technical improvements, 
-           increasing inbound leads for B2B markets in the Netherlands and UK.</p>
-      </div>
-      <div class="card">
-        <h3>Meituan Front Warehouse Launch</h3>
-        <p>Launched a new online store in China, built supplier network, achieved 10,000+ monthly orders and 
-           ¥300,000+ revenue within 6 months, ranking top 5 in customer satisfaction regionally.</p>
-      </div>
+  <section>
+    <h2>Key Performance</h2>
+    <div class="card-container">
+      <div class="card"><div class="kpi-number">10k+</div><p>Monthly Orders (Meituan)</p></div>
+      <div class="card"><div class="kpi-number">€300k+</div><p>Revenue Achieved</p></div>
+      <div class="card"><div class="kpi-number">Top 5</div><p>Customer Satisfaction Rank</p></div>
+      <div class="card"><div class="kpi-number">25%</div><p>Increase in Organic Leads</p></div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section class="experience">
+  <section>
     <h2>Experience</h2>
-    <div class="experience-card">
-      <h3>Heras B.V. – Digital Marketing Coordinator</h3>
-      <span>Mar 2019 – Apr 2024</span>
-      <ul>
-        <li>Implemented GA4 & Power BI dashboards across 10+ markets, enabling visibility of key KPIs.</li>
-        <li>Optimized UX & funnel analysis, reducing bounce rate by 24% and boosting engagement by 40%.</li>
-        <li>Coordinated SEO/SEM, automation, and paid campaigns to generate measurable leads.</li>
-      </ul>
+    <div class="exp-item">
+      <h3>Store Manager — Meituan 7+1 Online Supermarket</h3>
+      <p><em>Apr 2024 – Mar 2025 | China</em></p>
+      <p>Launched a new front warehouse store, built supplier network, and led team to exceed KPIs with 10,000+ monthly orders and ¥300,000+ revenue.</p>
     </div>
-    <div class="experience-card">
-      <h3>Meituan 7+1 Supermarket – Store Manager</h3>
-      <span>Apr 2024 – Apr 2025</span>
-      <ul>
-        <li>Launched and managed a new front warehouse store with strong data-driven operations.</li>
-        <li>Achieved 10,000+ monthly orders & ¥300,000+ monthly revenue in 6 months.</li>
-        <li>Ranked top 5 in customer satisfaction regionally.</li>
-      </ul>
+    <div class="exp-item">
+      <h3>Digital Marketing Coordinator — Heras B.V.</h3>
+      <p><em>Mar 2019 – Apr 2024 | Netherlands</em></p>
+      <p>Managed multi-country campaigns, SEO optimization, marketing automation, and NPS projects to enhance customer journey.</p>
     </div>
   </section>
 
-  <!-- Languages -->
-  <section class="languages">
-    <h2>Languages</h2>
-    <p>Chinese (Native) · English (Fluent) · Dutch (Basic)</p>
-  </section>
-
-  <!-- Personal Info -->
-  <section class="contact">
-    <h2>Personal Information</h2>
-    <div class="contact-info">
-      <div class="contact-item"><i class="fas fa-phone"></i> +31 6 1234 5678</div>
-      <div class="contact-item"><i class="fas fa-envelope"></i> katy.yin@email.com</div>
-      <div class="contact-item"><i class="fab fa-linkedin"></i> linkedin.com/in/katyyin</div>
-      <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Rotterdam, Netherlands</div>
+  <!-- Key Projects -->
+  <section>
+    <h2>Key Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>E-commerce Growth Strategy</h3>
+        <p>Increased online conversion rate by 20% via UX/UI optimization & SEM campaigns.</p>
+      </div>
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>SEO Global Optimization</h3>
+        <p>Boosted search rankings in 5 European markets, driving organic lead growth.</p>
+      </div>
+      <div class="project-card">
+        <img src="project3.jpg" alt="Project 3">
+        <h3>NPS Automation</h3>
+        <p>Developed semi-automated NPS system improving feedback loop for Sales & Service.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Katy Yin | Digital Marketing
-  </footer>
+  <!-- Education -->
+  <section>
+    <h2>Education</h2>
+    <div class="edu-item">
+      <h3>Bachelor in Business Administration</h3>
+      <p><em>Rotterdam University of Applied Sciences | 2015 – 2019</em></p>
+    </div>
+  </section>
 
-  <script>
-    // KPI 动态数字
-    const counters = document.querySelectorAll('.kpi-card span');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          const counter = entry.target;
-          const target = +counter.getAttribute('data-target');
-          let count = 0;
-          const increment = target / 100;
-          const update = () => {
-            count += increment;
-            if(count < target){
-              counter.innerText = Math.ceil(count).toLocaleString();
-              requestAnimationFrame(update);
-            } else {
-              counter.innerText = target.toLocaleString();
-            }
-          };
-          update();
-          observer.unobserve(counter);
-        }
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(counter => observer.observe(counter));
-  </script>
 </body>
 </html>
-
-
 
 
 
