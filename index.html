@@ -131,6 +131,28 @@
     .experience-card span { font-style: italic; color: #555; font-size: 0.85em; }
     .experience-card ul { padding-left: 18px; margin-top: 8px; }
 
+    /* 新增：Experience图片样式 */
+    .experience-img {
+      margin-top: 15px;
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    
+    .experience-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+      cursor: zoom-in;
+    }
+    
+    .experience-img img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
     /* Projects Section */
     .projects { 
       display: flex; 
@@ -590,7 +612,6 @@
       <h3>Heras B.V. – Digital Marketing Coordinator</h3>
       <span>Mar 2019 – Apr 2024</span>
       <ul>
-
         <li>Analyzed website behavior & funnels to identify drop-off points, directly supporting UX design, lead nurturing, and conversion uplift.</li>
         <li>Owned and managed websites' domains and digital platforms across multiple markets, ensuring content accuracy, SEO compliance, and consistent brand representation.</li>
         <li>Optimized content via CMS platforms, streamlining updates, page creation, and SEO-friendly structures.</li>
@@ -599,6 +620,17 @@
         <li>Designed and implemented multi-country real-time dashboards with GA4, Looker Studio & Power BI, enabling visibility of 50+ KPIs (conversion, engagement, NPS, etc).</li>
         <li>Coached stakeholders across markets on digital analytics, promoting data-informed decision-making.</li> 
       </ul>
+      
+      <!-- 新增的图片部分 -->
+      <div class="experience-img">
+        <div class="lazy-placeholder" style="height: 200px;">Loading image...</div>
+        <img 
+          data-src="./Pics/DM.jpg" 
+          alt="YY Digital Marketing Framework" 
+          class="lazy-media"
+          onclick="openModal(this)"
+          loading="lazy">
+      </div>
     </div>
     <div class="experience-card">
       <h3>Meituan 7+1 Supermarket – Store Manager</h3>
